@@ -2,7 +2,11 @@
 <resources>
 
     <string name="app_name">CapstoneProjectV2</string>
-    <string name="title_activity_main">Hello World Immersion</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_main">Lets Play</string>
+    <string name="hello_world">This is not a test!</string>
+    <string name="resume">Resume World</string>
+    <string name="get_world">Choose A World</string>
+    <string name="title_activity_game">Game Immersion</string>
+    <string name="title_activity_worlds_menu">Hello World Immersion</string>
 
 </resources>

@@ -10,6 +10,7 @@
         <activity
             android:name=".MainActivity"
             android:icon="@drawable/ic_glass_logo"
+            android:immersive="true"
             android:label="@string/title_activity_main" >
             <intent-filter>
                 <action android:name="com.google.android.glass.action.VOICE_TRIGGER" />
@@ -18,6 +19,22 @@
             <meta-data
                 android:name="com.google.android.glass.VoiceTrigger"
                 android:resource="@xml/voice_trigger" />
+        </activity>
+
+        <service
+            android:name=".Location.LocationService"
+            android:exported="false" >
+        </service>
+
+        <activity
+            android:name=".GameActivity"
+            android:icon="@drawable/ic_glass_logo"
+            android:label="@string/title_activity_game" >
+        </activity>
+        <activity
+            android:name=".WorldsMenuActivity"
+            android:icon="@drawable/ic_glass_logo"
+            android:label="@string/title_activity_worlds_menu" >
         </activity>
     </application>
 
