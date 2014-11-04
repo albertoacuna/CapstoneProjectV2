@@ -68,17 +68,18 @@ public class LocationService extends Service {
 
         for(int i =0; i < localPOIs.size(); i++){
             PointOfInterest poi = localPOIs.get(i);
-            Location poiLocation = poi.location;
-            if(isNearby(currentLocation, poiLocation)){
+            double poiLatitude = poi.Latitude;
+            double poiLongitude = poi.Longitude;
+            if(isNearby(currentLocation, poiLatitude, poiLongitude)){
                 localPOIs.add(poi);
             }
         }
     }
 
-    private boolean isNearby(Location currentLocation, Location poiLocation) {
+    private boolean isNearby(Location currentLocation, double poiLatitude, double poiLongitude) {
         boolean isNearby;
 
-        double distance = distance(currentLocation, poiLocation);
+        double distance = distance(currentLocation, poiLatitude, poiLongitude);
 
         if(distance <= radius){
             isNearby = true;
@@ -90,11 +91,11 @@ public class LocationService extends Service {
         return isNearby;
     }
 
-    private double distance(Location currentLocation, Location poiLocation) {
+    private double distance(Location currentLocation, double poiLatitude, double poiLongitude) {
         double lat1 = currentLocation.getLatitude();
         double lon1 = currentLocation.getLongitude();
-        double lat2 = poiLocation.getLatitude();
-        double lon2 = poiLocation.getLongitude();
+        double lat2 = poiLatitude;
+        double lon2 = poiLongitude;
 
 
         double theta = lon1 - lon2;

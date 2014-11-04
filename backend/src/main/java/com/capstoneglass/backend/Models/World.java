@@ -1,15 +1,12 @@
-package com.capstoneglass.capstoneprojectv2.Models;
+package com.capstoneglass.backend.Models;
 
-/**
- * Created by DasCruel on 11/1/2014.
- */
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by DasCruel on 11/1/2014.
+ * Created by DasCruel on 11/3/2014.
  */
 public class World {
     public long Id;
@@ -26,3 +23,4 @@ public class World {
         return gson.fromJson(json, World.class);
     }
 }
+

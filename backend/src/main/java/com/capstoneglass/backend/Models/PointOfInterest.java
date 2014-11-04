@@ -1,15 +1,11 @@
-package com.capstoneglass.capstoneprojectv2.Models;
+package com.capstoneglass.backend.Models;
 
 /**
- * Created by DasCruel on 11/1/2014.
+ * Created by DasCruel on 11/3/2014.
  */
-import android.location.Location;
-
 import com.google.gson.Gson;
+import java.awt.Point;
 
-/**
- * Created by DasCruel on 11/1/2014.
- */
 public class PointOfInterest {
     public long Id;
     public String Name;
@@ -26,3 +22,4 @@ public class PointOfInterest {
         return gson.fromJson(json, PointOfInterest.class);
     }
 }
+
